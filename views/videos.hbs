@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        td, th {
+            /*border-bottom: 1px solid #dddddd;*/
+            text-align: left;
+            padding: 8px;
+            font-size: 22px;
+        }
+        #price{
+            font-weight: 800;
+            font-size: 49px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+<!--<div class = "col-sm-6 col-md-6 ">-->
+    {{# each products}}
+        <!--<div class="row" >-->
+        {{# each this}}
+            <div class = "col-sm-3 col-md-11 " style="padding-top: 30px">
+            <table class="table " >
+                <tr>
+                    <th scope="col" rowspan="2"><img src={{this.category}} ></th>
+                    <td ><a href="/videos/view/{{this._id}}" >{{this.title}}</a></td>
+
+                </tr>
+                <tr >
+                    <th scope="col"></th>
+                    <td>{{this.description}}</td>
+                    <td id="price" colspan="4">${{this.price}}</td>
+
+
+                </tr>
+                <tr>
+                    <!--<td>-->
+                          <th colspan="4"></th>
+                    <td rowspan="2" ><button type="button" class="btn btn-success btn-lg">Primary</button></td>
+                        <td rowspan="2"> <a href="/videos/view/{{this._id}}"  class="btn btn-primary btn-lg" >View</a></td>
+
+                    <!--</td>-->
+                </tr>
+
+
+
+                <!--<tr>-->
+                    <!--<th scope="col"></th>-->
+                    <!---->
+                <!--</tr>-->
+
+                <!--<tr>-->
+                    <!--<th   scope="col" colspan="2" ></th>-->
+                    <!--<td  ><button type="button" class="btn btn-success btn-lg">Primary</button></td>-->
+                     <!--<td> <button type="button" class="btn btn-primary btn-lg">Secondary</button></td>-->
+
+                <!--</tr>-->
+
+
+
+            </table>
+            <!--<div style="padding-top: 30px">-->
+
+            <!--</div>-->
+
+        {{/each}}
+
+            </div>
+    {{/each}}
+   </div>
+
+
+</body>
+</html>
+

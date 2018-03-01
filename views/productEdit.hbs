@@ -1,0 +1,27 @@
+<div class = "col-sm-3 col-md-6 col-md-offset-3">
+    <form action="/admin/products/edit/{{product._id}}" method="post">
+
+        <div class="form-group">
+            <label for="email">Title</label>
+            <input type="text" class="form-control" id="title" name="title" value={{product.title}}>{{message}}
+        </div>
+        <div class="form-group">
+            <label for="pwd">Description:</label>
+            <input type="text" class="form-control" id="description" name="description" value={{product.description}}>
+        </div>
+
+        <div class="form-group">
+            <label for="challengeQuestion">Price</label>
+            <input type="number" class="form-control" id="price" name="price" value={{product.price}}>
+        </div>
+
+        <div class="form-group">
+            <label for="challengeAnswer">Product category (like "Nodejs png")</label>
+            <input type="text" class="form-control" id="category" name="category" value={{product.category}}>
+        </div>
+        <div class="form-group">
+            <label for="challengeAnswer">Product teaser Url</label>
+            <input type="text" class="form-control" id="teaserUrl" name="teaserUrl" value={{product.teaserUrl}}>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>

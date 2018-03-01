@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>{{video.title}}</h1>
+
+<iframe  type="text/html" width="420" height="345" src="{{video.teaserUrl}}">
+</iframe>
+<div class = "col-sm-3 col-md-8 col-md-offset-3">
+<<table class="table " >
+    <tr>
+        <th scope="col" rowspan="2"><img src={{video.category}} ></th>
+        <td >{{video.title}}</td>
+
+    </tr>
+    <tr >
+        <th scope="col"></th>
+        <td>{{video.description}}</td>
+        <td id="price" colspan="4">${{video.price}}</td>
+
+
+    </tr>
+    <tr>
+        <!--<td>-->
+        <form method="post" action="/cart/addToCart/{{video._id}}">
+            <th colspan="4"></th>
+            <td rowspan="2"> <input type="submit"  name="cart" value="addToCart" class="btn btn-primary btn-lg" ></td>
+
+
+        </form>
+
+    </tr>
+</table>
+
+
+</div>
+</body>
+</html>
+
